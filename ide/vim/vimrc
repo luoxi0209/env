@@ -1,0 +1,35 @@
+"不兼容vi模式，否则会出现很多情况
+set nocompatible
+ 
+set ts=4
+set expandtab
+syntax enable
+syntax on
+set modeline
+set fileencodings=ucs-bom,utf-8,gb18030,cp936,big5,euc-jp,sjis,euc-kr,ucs-2le,latin1
+set shiftwidth=4
+set cindent
+"设置忽略大小写，比如在搜索的时候
+set ignorecase
+"设置鼠标为可行
+set mouse=a
+"代码高亮所用的配色方案
+colorscheme evening
+"google
+set backspace=indent,eol,start
+"不产生备份文件
+set nobackup  
+"命令行的历史记录数
+set history=50   
+"显示光标状态
+set ruler 
+"show the command being typed
+set showcmd
+"查询时非常方便，如要查找book单词，当输入到/b时，会自动找到第一个b开头的单词
+set incsearch  
+"搜索时高亮显示找到的文本
+set hlsearch
+"永远显示状态行
+set laststatus=2
+"设置状态行显示的内容
+set statusline=\ %F%m%r\ \ \ %{getcwd()}%h\ \ \ Line:\ %l/%L:%c
