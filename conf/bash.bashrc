@@ -27,4 +27,11 @@ fi
 ###################### private conf ###########################
 root="/home/` who am i | awk '{print $1}'`/work/"
 
-PATH=$PATH:"$root/ide/SublimeText/sublime_text_3/"
+# java
+export JAVA_HOME="$root/env/lang/jdk1.8"
+export CLASSPATH=".:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar"
+export PATH="$PATH:$JAVA_HOME/bin"
+
+# ide
+export PATH="$PATH:$root/ide/SublimeText/sublime_text_3/"
+
