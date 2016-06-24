@@ -1,7 +1,8 @@
 root="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 user_home=~
 
-sudo bash ./install_software.sh
+sudo bash ./install/install_software.sh
+python ./install/install_local_software.py $root
 
 # bashrc
 cd $user_home
