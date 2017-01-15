@@ -25,16 +25,21 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 ###################### private conf ###########################
-root="/home/`who am i | awk '{print $1}'`/work"
+root="/home/$USER/work"
 
 # java
-export JAVA_HOME="$root/env/lang/jdk1.8"
-export CLASSPATH=".:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar"
+JAVA_HOME="$root/env/lang/jdk1.8"
+if [[ -d "$JAVA_HOME" ]]; then
+    export JAVA_HOME=$JAVA_HOME
+    export CLASSPATH=".:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar"
+fi 
 
 # to add in path
 mylist=(
         "env/lang/jdk1.8/bin"
         "ide/SublimeText/sublime_text_3"
+        "tools/maven3/bin"
+        "ide/idea/bin"
        )
 len=${#mylist[@]}
 for ((i=0; i<$len; i++))

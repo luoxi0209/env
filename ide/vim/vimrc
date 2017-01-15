@@ -12,9 +12,9 @@ set cindent
 "设置忽略大小写，比如在搜索的时候
 set ignorecase
 "设置鼠标为可行
-set mouse=a
+"set mouse=a
 "代码高亮所用的配色方案
-colorscheme evening
+colorscheme desert
 "google
 set backspace=indent,eol,start
 "不产生备份文件

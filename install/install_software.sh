@@ -1,10 +1,10 @@
 #apt-get update
-apt-get install wget
-apt-get install curl
-apt-get install vim
-apt-get install tmux
-apt-get install g++
-apt-get install subversion
-apt-get install git
-apt-get install gradle
+yes | apt-get install wget
+yes | apt-get install curl
+yes | apt-get install vim
+yes | apt-get install tmux
+yes | apt-get install g++
+yes | apt-get install subversion
+yes | apt-get install git
+yes | apt-get install gradle
 
